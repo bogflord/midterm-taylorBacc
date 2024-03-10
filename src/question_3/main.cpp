@@ -7,7 +7,6 @@ using std::string; using std::cin; using std::cout;
 int main()
 {
     auto option = 'y';
-    bool status = 1;
     string user_input;
 
     do{
@@ -20,11 +19,11 @@ int main()
 
             if(status==1)
             {
-                cout<<user_input<<" is a palindrome!\n";
+                cout<<user_input<<" is a palindrome!\nResult: True\n";
             }
             else
             {
-                cout<<user_input<<" is not a palindrome.\n";
+                cout<<user_input<<" is not a palindrome.\nResult: False\n";
             }
             cout<<"Would you like to try another?(Y/N): ";
             cin>>option;

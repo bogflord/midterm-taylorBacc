@@ -7,21 +7,15 @@ int main()
 {
     char option = 'y';
 
-    do
+    cout<<"Do you want to roll the die?(Y to continue): ";
+    cin>>option;
+
+    while(toupper(option)=='Y')
     {
-        if(toupper(option)=='Y')
-        {
-            roll_die();
-            cout<<"You rolled a: "<<roll_die()<<"\nWould you like to roll again?(Y/N): ";
-            cin>>option;
-        }
-        else
-        {
-            cout<<"Please only enter Y or N: ";
-            cin>>option;
-        }
-        
-    }while(toupper(option)!='N');
+        roll_die();
+        cout<<"You rolled a: "<<roll_die()<<"\nWould you like to roll again?(Y to continue): ";
+        cin>>option;
+    }
     
     cout<<"Thanks for playing!\n";
 
